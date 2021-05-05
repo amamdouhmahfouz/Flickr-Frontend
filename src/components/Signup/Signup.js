@@ -362,7 +362,7 @@ return (
          <div className="input-field">
           <input type="text" placeholder="Your age" className="active" id="signup-age" data-testid="age"
                   onChange={handleAgeInput} value={age}/>
-          <p className="error">{ageError}</p>
+          <p className={classes.p__error}>{ageError}</p>
          </div>
 
          <div className="input-field">
@@ -377,7 +377,7 @@ return (
                  <p className="error">{passError}</p>
            </div>
          
-         <div className="recaptcha">
+         <div className={classes.div__recaptcha}>
          <Recaptcha
           sitekey="6LdeKMIaAAAAAKqTK1fu3QZUmB7Lzu0A804Ln1hN"
           render="explicit"
@@ -386,7 +386,7 @@ return (
           />
           
           
-          <p className="error2">{checkboxErr}</p>
+          <p className={classes.p__error2}>{checkboxErr}</p>
         </div>
          
          <div className="input-field">

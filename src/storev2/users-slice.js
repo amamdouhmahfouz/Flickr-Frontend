@@ -66,7 +66,6 @@ const usersSlice = createSlice({
             state.currentUser.email = email;
             state.currentUser.password = password;
             state.currentUser.isLoggedIn = true;
-            alert("islogged in: ", state.currentUser.isLoggedIn);
         },
         logout(state, action) {
             state.currentUser.userId = null;

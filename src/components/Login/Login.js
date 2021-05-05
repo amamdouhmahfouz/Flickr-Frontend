@@ -52,7 +52,7 @@ const handlePasswordInput = (e) => {
 //////////////////////////// JSON SERVER /////////////////////////////////////
 
 const checkUserInput = () => {
-  API.get('users?emailaddress=' + email + '&password=' + password )
+  API.get('users?email=' + email + '&password=' + password )
   .then(response => {
     console.log(response.data);
     if(response.data.length > 0) {

@@ -5,12 +5,18 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import CloudUpload from '@material-ui/icons/CloudUpload';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import { useSelector } from 'react-redux';
 
 const GuestHeader = () => {
+
+    const isLoggedIn = useSelector(state => state.users.currentUser.isLoggedIn);
+
+
+ 
 
     return (
         // <header>
@@ -18,7 +24,7 @@ const GuestHeader = () => {
         // </header>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
             {/* <Navbar.Brand href="/home">Flickr</Navbar.Brand> */}
-            <Link to="/home" style={{textDecoration: 'none'}}>Flickr</Link>
+            <Link to={isLoggedIn ?  "/home" : "/"} style={{textDecoration: 'none'}}>Flickr</Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
             
@@ -28,8 +34,8 @@ const GuestHeader = () => {
                 <Button variant="outline-info">Search</Button>
             </Form>
   
-            <Nav.Link href="/login" >Login</Nav.Link>
-            <Nav.Link href="/signup">Signup</Nav.Link>
+            <NavLink className="navbar navbar-dark bg-dark" to="/login" >Login</NavLink>
+            <NavLink className="navbar navbar-dark bg-dark" to="/signup">Signup</NavLink>
     </Nav>
     
   </Navbar.Collapse>

@@ -59,14 +59,14 @@ span
     color: rgb(109, 104, 104);
 }
 
-p.error {
+.p__error {
     color: red;
     text-align: start;
     line-height: 50%;
     font-size: 90%;
 }
 
-p.error2{
+.p__error2{
     color: red;
     line-height: 190%;
     font-size: 90%;
@@ -74,6 +74,6 @@ p.error2{
     padding-left: 8%;
 }
 
-div.recaptcha {
+.div__recaptcha {
    padding-left: 15%;
 }

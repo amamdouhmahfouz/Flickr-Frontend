@@ -30,13 +30,13 @@ const Main = (props) => {
         <main>
             <Switch>
                 <Route exact path="/" component={Welcome} />
-                <Route path="/login" component={Login}/>
-                <Route path="/signup" component={Signup}/>
-                <Route path="/post-signup" component={FormSuccess} />
-                <Route path="/forgotpassword" component={ForgetPassword} />
-                <Route path="/post-forgotpassword" component={ForgetPasswordSuccess} />
-                <Route path="/forgotpassword-confirm" component={ResetPassword} />
-                <Route path="/post-forgotpassword-confirm" component={ResetPasswordSuccess} />
+                <Route exact path="/login" component={Login}/>
+                <Route exact path="/signup" component={Signup}/>
+                <Route exact path="/post-signup" component={FormSuccess} />
+                <Route exact path="/forgotpassword" component={ForgetPassword} />
+                <Route exact path="/post-forgotpassword" component={ForgetPasswordSuccess} />
+                <Route exact path="/forgotpassword-confirm" component={ResetPassword} />
+                <Route exact path="/post-forgotpassword-confirm" component={ResetPasswordSuccess} />
                 <ProtectedRoute exact path="/home" isLoggedIn={isLoggedIn} component={Posts}/>
                 <Route exact path="/user/:id" component={UserPage} />
                 <Route exact path="/photos" component={PostDetail} />

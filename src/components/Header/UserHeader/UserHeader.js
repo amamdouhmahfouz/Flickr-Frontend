@@ -5,12 +5,19 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import CloudUpload from '@material-ui/icons/CloudUpload';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import { useHistory } from "react-router-dom";
+
 //bg="dark" variant="dark"
 const UserHeader = () => {
+
+    const history = useHistory();
+
+    //To avoid the refreshing problem:
+    //https://stackoverflow.com/questions/63880605/react-js-how-to-prevent-page-reload-once-click-on-the-link-right-now-the-whole
 
     return (
 
@@ -21,13 +28,13 @@ const UserHeader = () => {
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
             <NavDropdown title="You" id="collasible-nav-dropdown" >
-                <NavDropdown.Item href="/about">About</NavDropdown.Item>
-                <NavDropdown.Item href="/photostream">PhotoStream</NavDropdown.Item>
-                <NavDropdown.Item href="/albums">Albums</NavDropdown.Item>
-                <NavDropdown.Item href="/faves">Faves</NavDropdown.Item>
-                <NavDropdown.Item href="/galleries">Galleries</NavDropdown.Item>
-                <NavDropdown.Item href="/groups">Groups</NavDropdown.Item>
-                <NavDropdown.Item href="/cameraroll">CameraRoll</NavDropdown.Item>
+                <NavDropdown.Item onSelect={() => history.push("/about")}>About</NavDropdown.Item>
+                <NavDropdown.Item onSelect={() => history.push("/photostream")}>PhotoStream</NavDropdown.Item>
+                <NavDropdown.Item onSelect={() => history.push("/albums")}>Albums</NavDropdown.Item>
+                <NavDropdown.Item onSelect={() => history.push("/faves")}>Faves</NavDropdown.Item>
+                <NavDropdown.Item onSelect={() => history.push("/galleries")}>Galleries</NavDropdown.Item>
+                <NavDropdown.Item onSelect={() => history.push("/groups")}>Groups</NavDropdown.Item>
+                <NavDropdown.Item onSelect={() => history.push("/cameraroll")}>CameraRoll</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Explore" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="/about">Recent Photos</NavDropdown.Item>

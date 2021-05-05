@@ -12,6 +12,7 @@ const Header = () => {
 
     return (
         <div>
+            {alert(isLoggedIn.toString())}
         {isLoggedIn ? <UserHeader /> : <GuestHeader />}
         </div>
     );
