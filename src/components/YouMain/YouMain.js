@@ -23,6 +23,7 @@ import YouAlbums from '../../pages/YouAlbums/YouAlbums';
 import YouAlbums_Collections from '../../pages/YouAlbums_Collections/YouAlbums_Collections'
 import { useSelector } from 'react-redux';
 import PhotoStream from '../PhotoStream/PhotoStream';
+import YouGalleries from '../YouGalleries/YouGalleries';
 
 function a11yProps(index) {
     return {
@@ -124,9 +125,9 @@ const YouMain = (props) => {
                             <Tab label="Photostream" {...a11yProps(1)} onClick={() => setTab('photostream')} />
                             <Tab label="Albums" {...a11yProps(2)} onClick={albumClickHandler}/>
                             <Tab label="Faves" {...a11yProps(3)} onClick={() => setTab('faves')} />
-                            <Tab label="Galleries" {...a11yProps(4)} />
-                            <Tab label="Groups" {...a11yProps(5)} />
-                        {myprof &&  (<Tab label="CameraRoll" {...a11yProps(6)} onClick={() => setTab('cameraRoll')}/>)}
+                            <Tab label="Galleries" {...a11yProps(4)} onClick={() => setTab('galleries')}/>
+
+                        {myprof &&  (<Tab label="CameraRoll" {...a11yProps(5)} onClick={() => setTab('cameraRoll')}/>)}
                         </Tabs>
                     </AppBar>
         
@@ -137,7 +138,8 @@ const YouMain = (props) => {
             {   tab === 'about' ? <YouAbout token={currentUserToken} currentUserId={currentUserId} userId={userId} currPics={DUMMY_IMAGES}/> : 
                (tab === 'albums' && collections==='false') ? <YouAlbums token={currentUserToken} currentUserId={currentUserId} setCameraRoll={setCameraRoll} setCollectionsTrue={setCollectionsTrue} currentTab={props.currentTab}/>
              : (tab === 'photostream') ? <PhotoStream userId={userId} token={currentUserToken}  />  
-             : (tab === 'faves') ? <YouFaves /> : <YouCameraRoll token={currentUserToken} currentUserId={currentUserId} userId={userId} currPics={DUMMY_IMAGES}/>   }
+             : (tab === 'faves') ? <YouFaves /> :
+             (tab === 'galleries') ? <YouGalleries /> : <YouCameraRoll token={currentUserToken} currentUserId={currentUserId} userId={userId} currPics={DUMMY_IMAGES}/>   }
 
             </div>
         </div>

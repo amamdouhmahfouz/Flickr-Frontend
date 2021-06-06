@@ -31,6 +31,7 @@ import Following from '../../pages/Following/Following'
 import YouAlbums from '../../pages/YouAlbums/YouAlbums'
 import AlbumItem from '../AlbumItem/AlbumItem';
 import AlbumDetail from '../AlbumDetail/AlbumDetail'
+import GalleryDetail from '../GalleryDetail/GalleryDetail';
 
 import AccountSettings from '../../components/UserSettings/AccountSettings';
 import editPass from '../UserSettings/editPass';
@@ -83,6 +84,8 @@ const Main = (props) => {
                 <Route exact path="/collections" render={(props) => <YouMain {...props} currentTab="albums" /> } />
                 <Route exact path="/organize" component={Organizer}/>
                 <Route exact path="/albums/:id" component={AlbumDetail} />
+                <Route exact path="/user/:id/galleries" render={(props) => <YouMain {...props} currentTab="galleries" /> } />
+                <Route exact path="/gallery/:id" component={GalleryDetail} />
             </Switch>
             
         </main>
