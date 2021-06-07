@@ -28,8 +28,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {useMediaQuery} from "@material-ui/core";
 import { useEffect } from 'react';
-import axios from 'axios';
-
+import API from '../../fakeAPI';
 
 
 function a11yProps(index) {
@@ -160,8 +159,8 @@ border:'1px solid black',
 
   // search queary constants////////////////////////////////////////////////////////////////////////////////////
   const SearchQ=props.location.search.slice(1);
-  const LocalH="http://localhost:7000/photo/search?searchText="+SearchQ+"&limit=200&page=1"
-const LocalH2="http://localhost:7000/user/search?searchText="+SearchQ+"&limit=20&page=1"
+  const LocalH="photo/search?searchText="+SearchQ+"&limit=200&page=1"
+const LocalH2="user/search?searchText="+SearchQ+"&limit=20&page=1"
   /////
 
 
@@ -171,7 +170,7 @@ const LocalH2="http://localhost:7000/user/search?searchText="+SearchQ+"&limit=20
 
 /////
 useEffect(() => {
-    axios.get(LocalH,{ 
+    API.get(LocalH,{ 
         headers: {
         "Authorization": `Bearer ${token}` 
     }})
@@ -189,7 +188,7 @@ useEffect(() => {
   }, [SearchQ])
 
   useEffect(() => {
-    axios.get(LocalH2,{ 
+    API.get(LocalH2,{ 
         headers: {
         "Authorization": `Bearer ${token}` 
     }})

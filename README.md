@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Flickr-Clone Frontend
+<div style="text-align: center;">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image from https://commons.wikimedia.org/wiki/File:Flickr_logo.png](data:image/png;base64,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)
 
-## Available Scripts
+</div>
 
-In the project directory, you can run:
+## How to run:
+- install [node](https://nodejs.org/en/download/)
 
-### `npm start`
+Open terminal/git-bash:
+```sh
+$ git clone https://github.com/amamdouhmahfouz/Flickr-Frontend.git
+$ npm install
+$ npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Or you can go directly to our deployed website: https://www.flickrclone.tech/
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## This project was done with:
+- React js
+- CSS
+- Material UI 
+- Redux Toolkit for state management
+- Jest for unit testing
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Team members
+- Abdelrahman Mamdouh
+- Alaa Hamed
+- Dina Mohsen
+- Esraa Hamed
+- Mostafa Hazem
