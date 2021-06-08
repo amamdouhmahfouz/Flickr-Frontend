@@ -71,7 +71,7 @@ return(
     <img     className={hover2 === true ? "hov" : "imm"} src={T_url} width={'100%'} height={T_h}  >
   
     </img>
-    <div className="bZ2">
+    <div className="bZ2" data-testid="title">
        {T_t}
    
             
