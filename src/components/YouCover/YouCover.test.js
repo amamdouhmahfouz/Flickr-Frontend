@@ -11,6 +11,6 @@ const DUMMY_IMAGES = ['https://image.shutterstock.com/image-photo/connected-flex
 
 it("renders Followers and Following" , () => {
     const { getByText } = render(<YouCover userId='5' currPics={DUMMY_IMAGES}/>)
-    expect(getByText('1 Following')).toBeTruthy();
+    expect(getByText('0 Following')).toBeTruthy();
     expect(getByText('0 Followers .')).toBeTruthy();
 })
