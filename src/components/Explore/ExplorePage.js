@@ -210,7 +210,7 @@ return(
     <div className="EXPPAGE">
     <div  className="TabsCC">
     <div className="buttonspace2"></div>
-<button  className={Tabb === 1 ? "selected_tabb1" : "tabb1"} //Ternary operator to see if Tab is selected or not and Change its cLassName depending on its state(if its =1)
+<button  data-testid="tab1" className={Tabb === 1 ? "selected_tabb1" : "tabb1"} //Ternary operator to see if Tab is selected or not and Change its cLassName depending on its state(if its =1)
 onClick={() => SetTabb(1)  } //Changing the state of tab to be 1 (for tab1) on click to be selected 
 >
 Explore
@@ -218,7 +218,7 @@ Explore
 
 
 <button //Button representing First Tab 
-
+data-testid="tab2"
 className={Tabb === 2 ? "selected_tabb2" : "tabb2"} //Ternary operator to see if Tab is selected or not and Change its cLassName depending on its state(if its =1)
 onClick={() => SetTabb(2)  } //Changing the state of tab to be 1 (for tab1) on click to be selected 
 >
@@ -238,7 +238,7 @@ Trending
 <div className="textspace">
 
  
-<text    className="exptext">   
+<text    data-testid="exploreItem" className="exptext">   
     Explore
 </text>
 </div>):(null)}
@@ -263,6 +263,7 @@ I_w={Image2.sizes.size.original.width}
 I_h={Image2.sizes.size.original.height}
 I_CC={Image2.favourites}
 I_FC={Image2.favourites}
+
 
 />
 </Grid>
