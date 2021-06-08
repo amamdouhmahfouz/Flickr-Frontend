@@ -1,9 +1,23 @@
+/**
+ * Page responsible for showing the following page of the user
+ * @function Following
+ */
+
 import './Followers.css'
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
+/**
+ * Array that contains the current users that follow the user
+ * @type {Array<objects>}
+ */
 const arr = [ {displayName:'MohamedEtraKhayat',firstName:'Ahmed',lastName:'El Zahawy Badr', photoCount:9, status:'Family'}, {displayName:'u2', firstName:'Alaa',lastName:'Tahtawy', photoCount:10, status:'Following'} ]
 
+/**
+ * 
+ * @param {properties} props 
+ * @returns {element} Contents of followers page 
+ */
 const Followers = (props) => {
     
     const [followStatus,setFollowStatus] = useState('Following')

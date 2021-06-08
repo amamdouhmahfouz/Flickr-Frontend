@@ -1,3 +1,8 @@
+/**
+ * Page responsible for upload photos for the user
+ * @function Upload
+ */
+
 import './Upload.css'
 import { useState } from 'react'
 import API from '../../fakeAPI';
