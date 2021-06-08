@@ -1,8 +1,18 @@
+/**
+ * Page responsible for uploading photos for the user
+ * @function Upload
+ */
+
 import './Upload.css'
 import { useState } from 'react'
 import API from '../../fakeAPI';
 import { useSelector } from 'react-redux';
 
+/**
+ * 
+ * @param {properties} props 
+ * @returns {element} Contents of upload page 
+ */
 const Upload = (props) => {
 
     const [selectedFile, setSelectedFile] = useState(null);
