@@ -272,6 +272,7 @@ Set your new Flickr Password
 <InputLabel htmlFor="outlined-adornment-password"> Current Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
+            data-testid="password"
             type={values.showPassword ? 'text' : 'password'}
             value={values.password}
             onChange={handleChange('password')}
@@ -301,6 +302,7 @@ Set your new Flickr Password
 <InputLabel htmlFor="outlined-adornment-password"> New Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
+            data-testid="password2"
             type={values2.showPassword2 ? 'text' : 'password'}
             value={values2.password2}
            onChange={handleChange2('password2')}

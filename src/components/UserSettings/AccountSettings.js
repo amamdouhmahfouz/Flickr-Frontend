@@ -82,14 +82,14 @@ return(
     // there is dividers
     // there is an avatar
     // there is a button representing the tab
-    <div className="ASpage">
+    <div className="ASpage" >
         
 <text className="Header"  >
 Account settings
 </text>
 <div className="buttonsp"></div>
 <div className="TabsC">
-<button //Button representing First Tab 
+<button  data-testid="a"//Button representing First Tab 
 
 className={Tab === 1 ? "selected_tab1" : "tab1"} //Ternary operator to see if Tab is selected or not and Change its cLassName depending on its state(if its =1)
 onClick={() => SetTab(1)  } //Changing the state of tab to be 1 (for tab1) on click to be selected 
@@ -105,7 +105,7 @@ Personal Information
     <Divider  />
 <Grid container spacing={5}  >
 {Tab==1 ?  //Grid Containing grid items mapped on the Array of People( If the second tab is selected) by using the URL element , Name and other elements to be shown on a card , and on click redirects to another page based on each person ID
-(<Grid item xs={12} sm={6} md={4}>
+(<Grid data-test-id="b" item xs={12} sm={6} md={4}>
 <div className="CardSp"></div>
 <Card className="Account"  style={cardStyling}>
 
