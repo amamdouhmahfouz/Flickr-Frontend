@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import PostDetail from './PostDetail';
 
 
-describe("Post detail testing", () => {
+describe("Post detail testing ", () => { 
 
     test('action buttons rendering correctly',  () => {
         
